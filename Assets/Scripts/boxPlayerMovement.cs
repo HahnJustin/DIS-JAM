@@ -5,55 +5,67 @@ using UnityEngine;
 public class boxPlayerMovement : MonoBehaviour
 {
 
-    public float speed = 5;
-    public float jumpSpeed = 20;
-    public Rigidbody2D rb;
-    public GameObject player;
-    public bool jumped = false;
-    
+    public float speed;
+    public float jumpSpeed;
+    private float moveInput;
 
+    private Rigidbody2D rb;
+
+    private bool facingRight = true;
+
+    private bool isGrounded;
+    public Transform groundCheck;
+    public float checkRadius;
+    public LayerMask whatIsGround;
+
+    private int extraJumps;
+    public int extraJumpsValue;
+    
     // Start is called before the first frame update
     void Start()
     {
+        extraJumps = extraJumpsValue;
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Vector2 velocity = Vector2.zero;
-        Vector3 currentPosition = new Vector3(Mathf.Round(player.transform.position.x), Mathf.Round(player.transform.position.y), Mathf.Round(player.transform.position.z));
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        moveInput = Input.GetAxis("Horizontal");
+        Debug.Log(moveInput);
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        if(facingRight == false && moveInput > 0)
         {
-
-
-            if (velocity.y == 0 && jumped == true && player.transform.position.y <= -2.86)
-            {
-                jumped = false;
-            }
-
-            if (jumped == false)
-            {
-                velocity.y = jumpSpeed;
-                jumped = true;
-                Debug.Log(velocity.y);
-            }
-
-            
-
-
+            Flip();
+        }
+        else if(facingRight == true && moveInput < 0)
+        {
+            Flip();
         }
 
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if (isGrounded == true)
         {
-            velocity.x = speed;
-        }
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
-        {
-            velocity.x = -speed;
+            extraJumps = 2;
         }
 
-        rb.velocity = velocity;
+        if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
+        {
+            rb.velocity = Vector2.up * jumpSpeed;
+            extraJumps--;
+        } else if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
+        {
+            rb.velocity = Vector2.up * jumpSpeed;
+        }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scaler = transform.localScale;
+        Scaler.x *= -1;
+        transform.localScale = Scaler;
     }
 }
