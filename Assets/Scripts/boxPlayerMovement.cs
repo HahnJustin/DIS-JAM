@@ -67,16 +67,16 @@ public class boxPlayerMovement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Hi");
         if (other.gameObject.CompareTag("Pick Up"))
         {
+            Debug.Log("inside loop");
             other.gameObject.SetActive(false);
             count++;
             SetCountText();
         }
-
-
     }
 
     void SetCountText()
@@ -93,7 +93,7 @@ public class boxPlayerMovement : MonoBehaviour
         rb.velocity = Vector2.up * jumpSpeed;
     }
 
-    void CoolJump()
+    public void CoolJump()
     {
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         rb.velocity = Vector2.up * jumpSpeed;
