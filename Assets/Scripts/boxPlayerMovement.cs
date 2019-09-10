@@ -97,7 +97,6 @@ public class boxPlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         rb.velocity = Vector2.up * jumpSpeed;
-
     }
 
     void Flip()
