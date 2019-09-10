@@ -480,7 +480,7 @@ MonoBehaviour:
   speed: 30
   jumpSpeed: 50
   groundCheck: {fileID: 1566638975}
-  checkRadius: 0.5
+  checkRadius: 0.25
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -667,7 +667,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031252385}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.25, y: 4.64, z: 0}
+  m_LocalPosition: {x: 33.89, y: -7.29, z: 0}
   m_LocalScale: {x: 20, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

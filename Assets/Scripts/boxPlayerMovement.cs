@@ -53,14 +53,18 @@ public class boxPlayerMovement : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps > 0)
         {
-            rb.velocity = Vector2.up * jumpSpeed;
+            Jump(rb, jumpSpeed);
             extraJumps--;
         } else if(Input.GetKeyDown(KeyCode.UpArrow) && extraJumps == 0 && isGrounded == true)
         {
-            rb.velocity = Vector2.up * jumpSpeed;
+            Jump(rb, jumpSpeed);
         }
     }
 
+    void Jump(Rigidbody2D rb, float jumpSpeed)
+    {
+        rb.velocity = Vector2.up * jumpSpeed;
+    }
     void Flip()
     {
         facingRight = !facingRight;
