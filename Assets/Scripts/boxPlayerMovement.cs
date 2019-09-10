@@ -47,7 +47,7 @@ public class boxPlayerMovement : MonoBehaviour
         counter++;
         if(counter % 500 ==0)
         {
-            speed *= 1.1f;
+            //speed *= 1.1f;
         }
 
 
