@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class boxPlayerMovement : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class boxPlayerMovement : MonoBehaviour
     private float moveInput;
     private int extraJumps;
     public int extraJumpsValue;
+    public int numberOfCoins;
 
     private Rigidbody2D rb;
     private bool facingRight = true;
@@ -24,12 +26,15 @@ public class boxPlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;
     int counter = 0;
 
+    public AudioSource sound;
+
     
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
         rb = gameObject.GetComponent<Rigidbody2D>();
+        sound = GetComponent<AudioSource>();
         count = 0;
         SetCountText();
         winText.text = "";
@@ -77,20 +82,25 @@ public class boxPlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Hi");
         if (other.gameObject.CompareTag("Pick Up"))
         {
-            Debug.Log("inside loop");
             other.gameObject.SetActive(false);
             count++;
             SetCountText();
+        }
+
+        if (other.gameObject.CompareTag("Enemies"))
+        {
+            winText.text = "You Died!";
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         }
     }
 
     void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
-        if (count >= 5)
+        if (count >= numberOfCoins)
         {
             winText.text = "You Win!";
         }
@@ -105,6 +115,7 @@ public class boxPlayerMovement : MonoBehaviour
     {
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
         rb.velocity = Vector2.up * jumpSpeed;
+        sound.Play();
     }
 
     void Flip()
