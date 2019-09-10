@@ -10,10 +10,13 @@ public class KillWall : MonoBehaviour
 
     Rigidbody2D rb;
 
+    int counter;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        counter = 0;
     }
 
     // Update is called once per frame
@@ -24,6 +27,13 @@ public class KillWall : MonoBehaviour
         velocity.x = speed;
 
         rb.velocity = velocity;
+
+        counter++;
+        if (counter % 500 == 0)
+        {
+            counter = 0;
+            speed *= 1.1f;
+        }
 
 
     }

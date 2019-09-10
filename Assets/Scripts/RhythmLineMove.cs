@@ -25,6 +25,8 @@ public class RhythmLineMove : MonoBehaviour
         velocity.x = -speed;
 
         rb.velocity = velocity;
+
+ 
     }
 
     public void Hit()
