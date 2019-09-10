@@ -216,3 +216,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thwompSpeed: 5
   thwompDelay: 3
+  angryThwomp: {fileID: 2827577600503685972, guid: dcbbd2c488f4a484db206c60ec33024c,
+    type: 3}
+  sleepThwomp: {fileID: -7403537067966117025, guid: dcbbd2c488f4a484db206c60ec33024c,
+    type: 3}
+  awakeThwomp: {fileID: -1125528212839367909, guid: dcbbd2c488f4a484db206c60ec33024c,
+    type: 3}

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Numerics;
 using Vector2 = UnityEngine.Vector2;
+using UnityEngine.SceneManagement;
 
 public class enemyScript : MonoBehaviour
 {
@@ -17,10 +18,12 @@ public class enemyScript : MonoBehaviour
     private Vector2 enemyCurrentPosition;
 
     private Rigidbody2D rb;
+    private SpriteRenderer render;
 
     // Start is called before the first frame update
     void Start()
     {
+        render = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         enemyStartPosition = gameObject.transform.position;
         if (ran.Next(2) == 0)
@@ -77,15 +80,27 @@ public class enemyScript : MonoBehaviour
     }
 
 
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("MattLevel");
+        }
+    }
+
+
     public void flipBool()
     {
         if (goRight)
         {
             goRight = false;
+            render.flipX = true;
         }
         else
         {
             goRight = true;
+            render.flipX = false;
         }
     }
 
