@@ -47,7 +47,7 @@ public class KillWall : MonoBehaviour
 
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }

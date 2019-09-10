@@ -3,11 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  - Pick Up
+  tags:
   - RhythmLine
-  - triggerRight
-  - triggerLeft
-  - player
   layers:
   - Default
   - TransparentFX
@@ -17,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - Note Layer
+  - Ground
   - 
   - 
   - 
@@ -44,7 +41,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Note Layer
-    uniqueID: 2110059025
     locked: 0
