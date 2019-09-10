@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 434628287195109614, guid: bcfa99193432a2a46a13d76095b770d6,
         type: 3}
       propertyPath: m_Name
-      value: ThwompLarge
+      value: ThwompLarge Variant
       objectReference: {fileID: 0}
     - target: {fileID: 434628287195109617, guid: bcfa99193432a2a46a13d76095b770d6,
         type: 3}
@@ -103,6 +103,11 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.9595505
       objectReference: {fileID: 0}
+    - target: {fileID: 434628287195109613, guid: bcfa99193432a2a46a13d76095b770d6,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 434628285843048161, guid: bcfa99193432a2a46a13d76095b770d6,
         type: 3}
       propertyPath: m_Offset.x
@@ -117,6 +122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 2.4197316
+      objectReference: {fileID: 0}
+    - target: {fileID: 434628287195109619, guid: bcfa99193432a2a46a13d76095b770d6,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bcfa99193432a2a46a13d76095b770d6, type: 3}
