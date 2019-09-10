@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 3375490748146446673}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,14 +177,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 0}
   winText: {fileID: 0}
+  camlocation: {fileID: 0}
   speed: 5
+  centeringspeed: 2
   jumpSpeed: 20
   extraJumpsValue: 1
+  numberOfCoins: 0
   groundCheck: {fileID: 4278911955006165615}
   checkRadius: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  sound: {fileID: 0}
 --- !u!58 &3375490748146446673
 CircleCollider2D:
   m_ObjectHideFlags: 0
