@@ -227,6 +227,11 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 876544086}
+    - target: {fileID: 4278911956559134945, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
+        type: 3}
+      propertyPath: camlocation
+      value: 
+      objectReference: {fileID: 902527300}
     - target: {fileID: 4278911956559134975, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
         type: 3}
       propertyPath: m_Sprite
@@ -2601,6 +2606,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 7, y: -3, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 8, y: -3, z: 0}
     second:
       m_TileIndex: 2
@@ -3214,7 +3228,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fa93436e6c9600841a1923b94277423a, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 29fef6b762d748a4498bfabcebe4291a, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 7f5aaa5310e10574792972566a7817fe, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: d6dafd9c2fc0181498a781c8f565e814, type: 2}
@@ -3227,7 +3241,7 @@ Tilemap:
   - m_RefCount: 158
     m_Data: {fileID: 1811192175901453740, guid: 84040d372c6f40341ae6ec9184b79832,
       type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 2646115023043067712, guid: c70ec3e5269579c4f87e4c8bbf29804e,
       type: 3}
   - m_RefCount: 1
@@ -3297,7 +3311,7 @@ Tilemap:
     m_Data: {fileID: 2340015926926913288, guid: c70ec3e5269579c4f87e4c8bbf29804e,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 246
+  - m_RefCount: 247
     m_Data:
       e00: 1
       e01: 0
@@ -3316,7 +3330,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 246
+  - m_RefCount: 247
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3416,7 +3430,7 @@ PrefabInstance:
     - target: {fileID: 200869072839668781, guid: 11ce673a5d4f4a5448136a2c2721c235,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6680973788572577965, guid: 11ce673a5d4f4a5448136a2c2721c235,
         type: 3}
