@@ -12,6 +12,7 @@ public class boxPlayerMovement : MonoBehaviour
     public Transform camlocation;
 
     public float speed;
+    public float centeringspeed = 2;
     private float origspeed;
     public float jumpSpeed;
     private float moveInput;
@@ -52,11 +53,11 @@ public class boxPlayerMovement : MonoBehaviour
 
         if (transform.position.x - camlocation.position.x < 0 && speed == origspeed)
         {
-            speed += 2;
+            speed += centeringspeed;
         }
         else if (transform.position.x - camlocation.position.x > 1 && speed == origspeed)
         {
-            speed -= 2;
+            speed -= centeringspeed;
         }
         else
         {
