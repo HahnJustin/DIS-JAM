@@ -281,9 +281,9 @@ TextureImporter:
       name: TilePalleteBASIC_11
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 198
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -304,7 +304,7 @@ TextureImporter:
         serializedVersion: 2
         x: 33
         y: 198
-        width: 31
+        width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -457,7 +457,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 16, y: -6}
+        - {x: 5, y: -10}
+        - {x: -13, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: -6}
       tessellationDetail: 0
       bones: []
       spriteID: f2ef701b34dfb924786f6f04c5f734dd
@@ -478,7 +483,12 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 4}
+        - {x: 0, y: -1}
+        - {x: -16, y: -6}
       tessellationDetail: 0
       bones: []
       spriteID: 026d8f645e298d542896d7f42e920168
@@ -499,7 +509,13 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: 10, y: 13}
+        - {x: -2, y: 9}
+        - {x: -16, y: 4}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 15}
       tessellationDetail: 0
       bones: []
       spriteID: 875bdf77857b1e44c94788c33c59f252
