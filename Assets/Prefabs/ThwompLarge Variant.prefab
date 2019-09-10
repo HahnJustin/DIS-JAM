@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 434628287195109614, guid: bcfa99193432a2a46a13d76095b770d6,
         type: 3}
       propertyPath: m_Name
-      value: ThwompLarge
+      value: ThwompLarge Variant
       objectReference: {fileID: 0}
     - target: {fileID: 434628287195109617, guid: bcfa99193432a2a46a13d76095b770d6,
         type: 3}
@@ -103,6 +103,24 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.9595505
       objectReference: {fileID: 0}
+    - target: {fileID: 434628287195109612, guid: bcfa99193432a2a46a13d76095b770d6,
+        type: 3}
+      propertyPath: angryThwomp
+      value: 
+      objectReference: {fileID: 928506345095558060, guid: dcbbd2c488f4a484db206c60ec33024c,
+        type: 3}
+    - target: {fileID: 434628287195109612, guid: bcfa99193432a2a46a13d76095b770d6,
+        type: 3}
+      propertyPath: sleepThwomp
+      value: 
+      objectReference: {fileID: 9126391959495358760, guid: dcbbd2c488f4a484db206c60ec33024c,
+        type: 3}
+    - target: {fileID: 434628287195109612, guid: bcfa99193432a2a46a13d76095b770d6,
+        type: 3}
+      propertyPath: awakeThwomp
+      value: 
+      objectReference: {fileID: -542537746506523585, guid: dcbbd2c488f4a484db206c60ec33024c,
+        type: 3}
     - target: {fileID: 434628285843048161, guid: bcfa99193432a2a46a13d76095b770d6,
         type: 3}
       propertyPath: m_Offset.x
