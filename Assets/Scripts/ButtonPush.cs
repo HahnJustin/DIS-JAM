@@ -24,6 +24,8 @@ public class ButtonPush : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        pressSpeed = spawner.GetComponent<LineSpawner>().spawntime;
+
         if (Input.anyKeyDown && hitObject && !pressed)
         {
             hitObject.gameObject.GetComponent<RhythmLineMove>().Hit();
@@ -31,6 +33,9 @@ public class ButtonPush : MonoBehaviour
             StartCoroutine(ButtonPress());
 
         }
+        else 
+            if(Input.anyKeyDown && !pressed)
+                StartCoroutine(ButtonPress());
     }
 
     void OnTriggerEnter2D(Collider2D other)
