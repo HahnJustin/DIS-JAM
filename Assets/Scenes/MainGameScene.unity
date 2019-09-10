@@ -227,12 +227,27 @@ PrefabInstance:
       propertyPath: sound
       value: 
       objectReference: {fileID: 876544086}
+    - target: {fileID: 4278911956559134945, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
+        type: 3}
+      propertyPath: camlocation
+      value: 
+      objectReference: {fileID: 902527300}
+    - target: {fileID: 4278911956559134945, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
+        type: 3}
+      propertyPath: centeringspeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4278911956559134975, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -5474863241207358205, guid: dcbbd2c488f4a484db206c60ec33024c,
         type: 3}
+    - target: {fileID: 4278911956559134974, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4278911956559134973, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
         type: 3}
       propertyPath: m_Offset.x
@@ -268,20 +283,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4278911955006165614, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4278911956559134974, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
-        type: 3}
-      propertyPath: m_GravityScale
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 4278911955006165615, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4278911955006165614, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3375490748146446673, guid: 5ffe9b9b6be28364eb01b3e5a38d494e, type: 3}
@@ -391,9 +401,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 44cf86b642b469f448f19a3d78259df7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.582
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -487,9 +497,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b6541b7c1732f444288e78ce4b424605, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.588
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -877,7 +887,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002768179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5, y: 0.5, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1603997421}
@@ -2601,6 +2611,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 7, y: -3, z: 0}
+    second:
+      m_TileIndex: 22
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 8, y: -3, z: 0}
     second:
       m_TileIndex: 2
@@ -3214,7 +3233,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: fa93436e6c9600841a1923b94277423a, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 29fef6b762d748a4498bfabcebe4291a, type: 2}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 7f5aaa5310e10574792972566a7817fe, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: d6dafd9c2fc0181498a781c8f565e814, type: 2}
@@ -3227,7 +3246,7 @@ Tilemap:
   - m_RefCount: 158
     m_Data: {fileID: 1811192175901453740, guid: 84040d372c6f40341ae6ec9184b79832,
       type: 3}
-  - m_RefCount: 4
+  - m_RefCount: 5
     m_Data: {fileID: 2646115023043067712, guid: c70ec3e5269579c4f87e4c8bbf29804e,
       type: 3}
   - m_RefCount: 1
@@ -3297,7 +3316,7 @@ Tilemap:
     m_Data: {fileID: 2340015926926913288, guid: c70ec3e5269579c4f87e4c8bbf29804e,
       type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 246
+  - m_RefCount: 247
     m_Data:
       e00: 1
       e01: 0
@@ -3316,7 +3335,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 246
+  - m_RefCount: 247
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3413,6 +3432,21 @@ PrefabInstance:
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 200869072839668781, guid: 11ce673a5d4f4a5448136a2c2721c235,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680973788572577965, guid: 11ce673a5d4f4a5448136a2c2721c235,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -2.9460464
+      objectReference: {fileID: 0}
+    - target: {fileID: 6680973788572577965, guid: 11ce673a5d4f4a5448136a2c2721c235,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.85535884
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11ce673a5d4f4a5448136a2c2721c235, type: 3}
 --- !u!1001 &1060150875
@@ -3492,6 +3526,16 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 876544085}
+    - target: {fileID: 6792424421328592450, guid: 79b6a2a875d6c4c409b278dd5a57da03,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.010012738
+      objectReference: {fileID: 0}
+    - target: {fileID: 6792424421328592450, guid: 79b6a2a875d6c4c409b278dd5a57da03,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5027161
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79b6a2a875d6c4c409b278dd5a57da03, type: 3}
 --- !u!1001 &1097529620
