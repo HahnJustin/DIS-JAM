@@ -202,6 +202,11 @@ PrefabInstance:
       propertyPath: winText
       value: 
       objectReference: {fileID: 641039408}
+    - target: {fileID: 4278911956559134945, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
+        type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4278911956559134975, guid: 5ffe9b9b6be28364eb01b3e5a38d494e,
         type: 3}
       propertyPath: m_Sprite
