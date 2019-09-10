@@ -1,16 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class boxPlayerMovement : MonoBehaviour
 {
+    public Text countText;
+    public Text winText;
+    private int count;
 
     public float speed;
     public float jumpSpeed;
     private float moveInput;
+    private int extraJumps;
+    public int extraJumpsValue;
 
     private Rigidbody2D rb;
-
     private bool facingRight = true;
 
     private bool isGrounded;
@@ -18,14 +23,16 @@ public class boxPlayerMovement : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
-    private int extraJumps;
-    public int extraJumpsValue;
+
     
     // Start is called before the first frame update
     void Start()
     {
         extraJumps = extraJumpsValue;
         rb = gameObject.GetComponent<Rigidbody2D>();
+        count = 0;
+        SetCountText();
+        winText.text = "";
     }
 
     // Update is called once per frame
@@ -34,7 +41,6 @@ public class boxPlayerMovement : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         moveInput = Input.GetAxis("Horizontal");
-        Debug.Log(moveInput);
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
         if(facingRight == false && moveInput > 0)
@@ -61,10 +67,39 @@ public class boxPlayerMovement : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Pick Up"))
+        {
+            other.gameObject.SetActive(false);
+            count++;
+            SetCountText();
+        }
+
+
+    }
+
+    void SetCountText()
+    {
+        countText.text = "Count: " + count.ToString();
+        if (count >= 5)
+        {
+            winText.text = "You Win!";
+        }
+    }
+
     void Jump(Rigidbody2D rb, float jumpSpeed)
     {
         rb.velocity = Vector2.up * jumpSpeed;
     }
+
+    void CoolJump()
+    {
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+        rb.velocity = Vector2.up * jumpSpeed;
+
+    }
+
     void Flip()
     {
         facingRight = !facingRight;
