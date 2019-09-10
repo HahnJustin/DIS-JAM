@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
+  - Pick Up
+  - RhythmLine
   - triggerRight
   - triggerLeft
   - player
@@ -16,7 +17,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Note Layer
   - 
   - 
   - 
@@ -43,4 +44,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Note Layer
+    uniqueID: 2110059025
     locked: 0
