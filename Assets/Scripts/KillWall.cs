@@ -31,7 +31,7 @@ public class KillWall : MonoBehaviour
         counter++;
         if (counter % 500 == 0)
         {
-            //counter = 0;
+           // counter = 0;
            // speed *= 1.1f;
         }
 

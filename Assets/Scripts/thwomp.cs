@@ -14,6 +14,11 @@ public class thwomp : MonoBehaviour
     private bool inDelay;
     private bool reloading;
     private Vector2 thwompStartPos;
+    private SpriteRenderer renderer;
+
+    public Sprite angryThwomp;
+    public Sprite sleepThwomp;
+    public Sprite awakeThwomp;
 
 
 
@@ -25,6 +30,7 @@ public class thwomp : MonoBehaviour
         inDelay = false;
         thwompStartPos.y = gameObject.transform.position.y;
         reloading = false;
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -72,7 +78,7 @@ public class thwomp : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            SceneManager.LoadScene("MattScene");
+            SceneManager.LoadScene("MattLevel");
         }
         else
         {
@@ -82,6 +88,7 @@ public class thwomp : MonoBehaviour
 
     public void thwompReload()
     {
+        renderer.sprite = sleepThwomp;
         reloading = true;
         thwompGoDown = false;
         Vector2 vel = rb.velocity;
@@ -92,8 +99,10 @@ public class thwomp : MonoBehaviour
 
     public IEnumerator thwompDown()
     {
+        renderer.sprite = awakeThwomp;
         inDelay = true;
         yield return new WaitForSeconds(thwompDelay);
+        renderer.sprite = angryThwomp;
         thwompMoveDown();
     }
 

@@ -9,8 +9,11 @@ public class boxPlayerMovement : MonoBehaviour
     public Text countText;
     public Text winText;
     private int count;
+    public Transform camlocation;
 
     public float speed;
+    public float centeringspeed = 2;
+    private float origspeed;
     public float jumpSpeed;
     private float moveInput;
     private int extraJumps;
@@ -24,7 +27,6 @@ public class boxPlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
-    int counter = 0;
 
     public AudioSource sound;
 
@@ -38,6 +40,7 @@ public class boxPlayerMovement : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
+        origspeed = speed;
     }
 
     // Update is called once per frame
@@ -45,16 +48,21 @@ public class boxPlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        //moveInput = Input.GetAxis("Horizontal");
         moveInput = 1;
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
 
-        counter++;
-        if(counter % 500 ==0)
+        if (transform.position.x - camlocation.position.x < 0 && speed == origspeed)
         {
-            //speed *= 1.1f;
+            speed += centeringspeed;
         }
-
+        else if (transform.position.x - camlocation.position.x > 1 && speed == origspeed)
+        {
+            speed -= centeringspeed;
+        }
+        else
+        {
+            speed = origspeed;
+        }
 
         if(facingRight == false && moveInput > 0)
         {
