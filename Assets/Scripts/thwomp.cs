@@ -78,7 +78,7 @@ public class thwomp : MonoBehaviour
     {
         if (collision.gameObject.tag == "player")
         {
-            SceneManager.LoadScene("MattScene");
+            SceneManager.LoadScene("MattLevel");
         }
         else
         {

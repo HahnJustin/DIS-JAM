@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - RhythmLine
+  - player
+  - triggerLeft
+  - triggerRight
+  - Pick Up
+  - Enemies
   layers:
   - Default
   - TransparentFX

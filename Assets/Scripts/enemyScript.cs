@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Numerics;
 using Vector2 = UnityEngine.Vector2;
+using UnityEngine.SceneManagement;
 
 public class enemyScript : MonoBehaviour
 {
@@ -76,6 +77,16 @@ public class enemyScript : MonoBehaviour
             vel.x = -speed;
         }
         rb.velocity = vel;
+    }
+
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            SceneManager.LoadScene("MattLevel");
+        }
     }
 
 
