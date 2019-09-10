@@ -130,7 +130,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 20
+  m_GravityScale: 5
   m_Material: {fileID: 6200000, guid: a7997aa693164d24d9c33a0dca61a56b, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -176,8 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countText: {fileID: 0}
   winText: {fileID: 0}
-  speed: 30
-  jumpSpeed: 50
+  speed: 5
+  jumpSpeed: 20
   extraJumpsValue: 1
   groundCheck: {fileID: 4278911955006165615}
   checkRadius: 0.5
