@@ -265,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  movementRadius: 50
+  movementRadius: 10
   goRight: 0
 --- !u!1 &435782464
 GameObject:
