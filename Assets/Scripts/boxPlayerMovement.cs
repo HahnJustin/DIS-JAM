@@ -22,7 +22,7 @@ public class boxPlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
-
+    int counter = 0;
 
     
     // Start is called before the first frame update
@@ -40,8 +40,16 @@ public class boxPlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
-        moveInput = Input.GetAxis("Horizontal");
+        //moveInput = Input.GetAxis("Horizontal");
+        moveInput = 1;
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        counter++;
+        if(counter % 500 ==0)
+        {
+            speed *= 1.1f;
+        }
+
 
         if(facingRight == false && moveInput > 0)
         {
